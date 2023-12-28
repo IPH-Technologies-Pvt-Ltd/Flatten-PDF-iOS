@@ -30,8 +30,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJ2-mq-0d6">
-                                <rect key="frame" x="120" y="228.5" width="174" height="33.5"/>
+                                <rect key="frame" x="120" y="228.5" width="174" height="36.5"/>
                                 <color key="backgroundColor" red="0.1019607843" green="0.32549019610000002" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36.5" id="DU3-ei-MN8"/>
+                                </constraints>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Upload PDF">
@@ -42,7 +45,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kzF-rB-3vw" customClass="PDFView">
-                                <rect key="frame" x="0.0" y="318" width="414" height="271"/>
+                                <rect key="frame" x="0.0" y="321" width="414" height="271"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No file selected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="em9-FE-4xo">
                                         <rect key="frame" x="8" y="118" width="398" height="36"/>
@@ -62,7 +65,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IdN-h7-Hr3">
-                                <rect key="frame" x="120" y="625" width="198" height="37"/>
+                                <rect key="frame" x="117" y="628" width="180" height="37"/>
                                 <color key="tintColor" red="0.098039215690000001" green="0.56078431370000004" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Flatten">
@@ -73,11 +76,11 @@
                                 </connections>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PgR-rd-IMZ">
-                                <rect key="frame" x="146" y="606" width="122" height="4"/>
+                                <rect key="frame" x="146" y="609" width="122" height="4"/>
                                 <color key="tintColor" red="0.1019607843" green="0.32549019610000002" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </progressView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fs-2S-Qgc">
-                                <rect key="frame" x="129" y="667" width="180" height="34.5"/>
+                                <rect key="frame" x="117" y="670" width="180" height="34.5"/>
                                 <color key="backgroundColor" red="0.06585701365286363" green="0.38446969696969702" blue="0.24662314480255768" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="Oaq-bf-O2h"/>
@@ -97,6 +100,13 @@
                                 <color key="textColor" red="0.1019607843" green="0.32549019610000002" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbz-zY-S11">
+                                <rect key="frame" x="356.5" y="597" width="37.5" height="18"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.95294117649999999" green="0.97254901959999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -105,22 +115,22 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ced-gT-D2V" secondAttribute="trailing" constant="8" id="35q-Tw-CEW"/>
                             <constraint firstItem="1fs-2S-Qgc" firstAttribute="top" secondItem="IdN-h7-Hr3" secondAttribute="bottom" constant="5" id="36q-W3-626"/>
                             <constraint firstItem="Ced-gT-D2V" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="3s2-hX-8ir"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IdN-h7-Hr3" secondAttribute="trailing" constant="96" id="4oC-VX-8Ed"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dbz-zY-S11" secondAttribute="trailing" constant="20" id="4Ai-fh-Dis"/>
                             <constraint firstItem="jJ2-mq-0d6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="61t-pb-PR7"/>
+                            <constraint firstItem="IdN-h7-Hr3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6Q2-72-f3Q"/>
                             <constraint firstItem="Ced-gT-D2V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="AsP-cU-NrY"/>
                             <constraint firstItem="C9q-vZ-nIs" firstAttribute="top" secondItem="Ced-gT-D2V" secondAttribute="bottom" constant="20" id="BHf-Kc-IBd"/>
+                            <constraint firstItem="PgR-rd-IMZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BlU-0w-cKo"/>
+                            <constraint firstItem="IdN-h7-Hr3" firstAttribute="width" secondItem="1fs-2S-Qgc" secondAttribute="width" multiplier="1:1" id="Bwv-5O-SK9"/>
                             <constraint firstItem="kzF-rB-3vw" firstAttribute="top" secondItem="jJ2-mq-0d6" secondAttribute="bottom" constant="56" id="DqG-Yq-eaf"/>
-                            <constraint firstItem="IdN-h7-Hr3" firstAttribute="top" secondItem="kzF-rB-3vw" secondAttribute="bottom" constant="36" id="EdS-zM-M9y"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C9q-vZ-nIs" secondAttribute="trailing" constant="8" id="FmS-Uj-G3I"/>
                             <constraint firstItem="PgR-rd-IMZ" firstAttribute="top" secondItem="kzF-rB-3vw" secondAttribute="bottom" constant="17" id="NKb-8p-5co"/>
                             <constraint firstItem="wIG-ci-WWK" firstAttribute="top" secondItem="C9q-vZ-nIs" secondAttribute="bottom" constant="10" id="Qwb-nK-cDw"/>
+                            <constraint firstItem="PgR-rd-IMZ" firstAttribute="width" secondItem="1fs-2S-Qgc" secondAttribute="width" multiplier="0.677778" id="RI5-xs-sNQ"/>
                             <constraint firstItem="kzF-rB-3vw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Vkl-eA-sXT"/>
-                            <constraint firstItem="1fs-2S-Qgc" firstAttribute="centerX" secondItem="IdN-h7-Hr3" secondAttribute="centerX" id="WOl-Oa-i6D"/>
-                            <constraint firstItem="IdN-h7-Hr3" firstAttribute="top" secondItem="kzF-rB-3vw" secondAttribute="bottom" constant="36" id="aiQ-8i-HZE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PgR-rd-IMZ" secondAttribute="trailing" constant="146" id="bAD-Ly-LEI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wIG-ci-WWK" secondAttribute="trailing" constant="8" id="dfu-Mq-gmr"/>
                             <constraint firstItem="IdN-h7-Hr3" firstAttribute="top" secondItem="PgR-rd-IMZ" secondAttribute="bottom" constant="15" id="fC5-Kz-AQZ"/>
-                            <constraint firstItem="IdN-h7-Hr3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="jKa-Vw-cNB"/>
+                            <constraint firstItem="1fs-2S-Qgc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k3N-ww-q2d"/>
                             <constraint firstItem="kzF-rB-3vw" firstAttribute="top" secondItem="jJ2-mq-0d6" secondAttribute="bottom" constant="56" id="kJ1-cO-hZ4"/>
                             <constraint firstItem="C9q-vZ-nIs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="l0c-XA-bST"/>
                             <constraint firstItem="jJ2-mq-0d6" firstAttribute="top" secondItem="wIG-ci-WWK" secondAttribute="bottom" constant="56" id="pBq-GK-C4Q"/>
@@ -128,7 +138,7 @@
                             <constraint firstItem="jJ2-mq-0d6" firstAttribute="top" secondItem="wIG-ci-WWK" secondAttribute="bottom" constant="56" id="v3O-vA-9rs"/>
                             <constraint firstItem="kzF-rB-3vw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xGM-eZ-b2C"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jJ2-mq-0d6" secondAttribute="trailing" constant="120" id="y2k-hT-32K"/>
-                            <constraint firstItem="PgR-rd-IMZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="146" id="yGH-3l-ma7"/>
+                            <constraint firstItem="dbz-zY-S11" firstAttribute="top" secondItem="kzF-rB-3vw" secondAttribute="bottom" constant="5" id="yCe-p2-Evt"/>
                         </constraints>
                     </view>
                     <connections>
@@ -137,6 +147,7 @@
                         <outlet property="flattenPDFLbl" destination="Ced-gT-D2V" id="FAZ-fO-6yv"/>
                         <outlet property="makeYourEditorLbl" destination="C9q-vZ-nIs" id="Hsz-Q5-xBv"/>
                         <outlet property="noSelectLbl" destination="em9-FE-4xo" id="fFD-zA-W66"/>
+                        <outlet property="pdfSizeLbl" destination="dbz-zY-S11" id="c5p-uu-qqE"/>
                         <outlet property="pdfView" destination="kzF-rB-3vw" id="kz6-60-Sz3"/>
                         <outlet property="progressView" destination="PgR-rd-IMZ" id="xaU-Za-UsZ"/>
                         <outlet property="sizeLimitLbl" destination="wIG-ci-WWK" id="9Gm-he-LUN"/>

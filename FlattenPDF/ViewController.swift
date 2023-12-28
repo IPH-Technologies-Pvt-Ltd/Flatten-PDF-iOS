@@ -14,9 +14,9 @@ class ViewController: UIViewController, UIDocumentPickerDelegate {
     @IBOutlet weak var flattenButton: UIButton!
     @IBOutlet weak var noSelectLbl: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var pdfSizeLbl: UILabel!
     
     
-
     //MARK: Life Cycle Method
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,18 +27,18 @@ class ViewController: UIViewController, UIDocumentPickerDelegate {
         flattenButton.layer.cornerRadius = 10
         downloadButton.layer.cornerRadius = 10
         progressView.isHidden = true
+        pdfSizeLbl.isHidden = true
         
     }
-    
     
     //MARK: -Actions
     @IBAction func uploadPDFButtonAction(_ sender: Any) {
         
         let documentPicker = UIDocumentPickerViewController(documentTypes: ["com.adobe.pdf"], in: .import)
-          documentPicker.delegate = self
-          documentPicker.allowsMultipleSelection = false
-          present(documentPicker, animated: true, completion: nil)
-       
+        documentPicker.delegate = self
+        documentPicker.allowsMultipleSelection = false
+        present(documentPicker, animated: true, completion: nil)
+        
     }
     
     @IBAction func flattenBtnAction(_ sender: UIButton) {
@@ -71,7 +71,12 @@ class ViewController: UIViewController, UIDocumentPickerDelegate {
         do {
             let flattenedDocument = try pdfView.document?.flattened()
             pdfView.document = flattenedDocument
-            let ducumentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+            pdfSizeLbl.isHidden = false
+            let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+            pdfView.document?.write(to: documentDirectory.first!)
+            let fileSize = try FileManager.default.attributesOfItem(atPath: documentDirectory.first!.path)[.size] as? Int
+            let fileSizeString = ByteCountFormatter.string(fromByteCount: Int64(fileSize ?? 0), countStyle: .file)
+            pdfSizeLbl.text = "Size: \(fileSizeString)"
             flattenButton.isHidden = true
             downloadButton.isHidden = false
         } catch {
@@ -82,10 +87,10 @@ class ViewController: UIViewController, UIDocumentPickerDelegate {
     @IBAction func downloadButtonAction(_ sender: UIButton) {
         
         if pdfView.document == nil {
-                showAlert(message: "Please select a PDF first.")
-            } else {
-                showActionSheet()
-            }
+            showAlert(message: "Please select a PDF first.")
+        } else {
+            self.savePDF()
+        }
     }
     
     
@@ -98,27 +103,6 @@ class ViewController: UIViewController, UIDocumentPickerDelegate {
         
     }
     
-    func showActionSheet() {
-        
-            let alertController = UIAlertController(title: "Choose an action", message: nil, preferredStyle: .actionSheet)
-            let saveAction = UIAlertAction(title: "Save PDF", style: .default) { _ in
-                self.savePDF()
-            }
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            alertController.addAction(saveAction)
-            alertController.addAction(cancelAction)
-
-            if let popoverController = alertController.popoverPresentationController {
-                popoverController.sourceView = self.view
-                popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
-                popoverController.permittedArrowDirections = []
-            }
-
-            present(alertController, animated: true, completion: nil)
-        
-        }
-    
-    
     func savePDF() {
         
         if let pdfDocument = pdfView.document {
@@ -130,23 +114,23 @@ class ViewController: UIViewController, UIDocumentPickerDelegate {
         }
         
     }
-
-
+    
+    
     func printPDF() {
         
         guard let flattenedDocument = pdfView.document else {
             return
         }
         let printController = UIPrintInteractionController.shared
-
+        
         let printInfo = UIPrintInfo.printInfo()
         printInfo.outputType = .general
         printInfo.jobName = "Print Job"
-
+        
         printController.printInfo = printInfo
         printController.showsPageRange = true
         printController.printingItem = flattenedDocument.dataRepresentation()
-
+        
         printController.present(animated: true) { (_, isPrinted, error) in
             if isPrinted {
                 print("Print job completed successfully.")
@@ -158,17 +142,27 @@ class ViewController: UIViewController, UIDocumentPickerDelegate {
         }
         
     }
-
+    
     func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
-       
+        
         guard let selectedFileURL = urls.first else {
             return
         }
-        flattenButton.setTitle("Flatten", for: .normal)
-        flattenButton.isHidden = false
-        downloadButton.isHidden = true
-        noSelectLbl.isHidden = true
-        pdfView.document = PDFDocument(url: selectedFileURL)
+        
+        do {
+            let pdfDocument = try PDFDocument(url: selectedFileURL)
+            let fileSize = try FileManager.default.attributesOfItem(atPath: selectedFileURL.path)[.size] as? Int
+            let fileSizeString = ByteCountFormatter.string(fromByteCount: Int64(fileSize ?? 0), countStyle: .file)
+            pdfSizeLbl.isHidden = false
+            flattenButton.setTitle("Flatten", for: .normal)
+            flattenButton.isHidden = false
+            downloadButton.isHidden = true
+            noSelectLbl.isHidden = true
+            pdfView.document = pdfDocument
+            pdfSizeLbl.text = "Size: \(fileSizeString)"
+        } catch {
+            showAlert(message: "Error loading PDF: \(error.localizedDescription)")
+        }
         
     }
     
@@ -182,23 +176,23 @@ class ViewController: UIViewController, UIDocumentPickerDelegate {
         guard let originalDocument = PDFDocument(url: url) else {
             throw NSError(domain: "com.yourapp.error", code: 1, userInfo: [NSLocalizedDescriptionKey: "Failed to load PDF document."])
         }
-
+        
         let flattenedDocument = PDFDocument()
-
+        
         for pageIndex in 0..<originalDocument.pageCount {
             guard let originalPage = originalDocument.page(at: pageIndex) else {
                 continue
             }
-
+            
             let flattenedPageImage = originalPage.image(withDPI: dpi)
-
+            
             if let flattenedPage = PDFPage(image: flattenedPageImage) {
                 flattenedDocument.insert(flattenedPage, at: flattenedDocument.pageCount)
             } else {
                 print("Error creating flattened page for index \(pageIndex)")
             }
         }
-
+        
         return flattenedDocument
     }
     
