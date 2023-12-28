@@ -41,7 +41,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) fil
 
 - [FontAwesomeSwift](https://github.com/thii/FontAwesome.swift) - Used for displaying social media icons.
 
-  ## Video
+## Video
 https://github.com/IPH-Technologies-Pvt-Ltd/Flatten-PDF-iOS/assets/124868129/0ac7493b-383c-4a1d-9dc2-73e2cc596da7
 
 
