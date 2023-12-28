@@ -1,3 +1,5 @@
+
+https://github.com/IPH-Technologies-Pvt-Ltd/Flatten-PDF-iOS/assets/124868129/0ac7493b-383c-4a1d-9dc2-73e2cc596da7
 # Flatten-PDF-iOS
 [![Swift](https://img.shields.io/badge/swift-%2320232a.svg?style=for-the-badge&logo=swift&logoColor=%23F05138)](https://swift.org/)
 
@@ -40,8 +42,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) fil
 
 - [FontAwesomeSwift](https://github.com/thii/FontAwesome.swift) - Used for displaying social media icons.
 
-  ## Screenshots
-  ![Simulator Screen Recording - iPhone 14 Pro Max - 2023-12-27 at 10 40 48](https://github.com/IPH-Technologies-Pvt-Ltd/Flatten-PDF-iOS/assets/124868129/c14a43c8-3067-46e9-badc-86631a263f5f)
+  ## Video
+  Uploading FlattenPDF-iOS.mov…
 
 
 
