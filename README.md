@@ -41,7 +41,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) fil
 - [FontAwesomeSwift](https://github.com/thii/FontAwesome.swift) - Used for displaying social media icons.
 
 ## Video
-![Simulator Screen Recording - iPhone 14 Pro Max - 2024-01-03 at 11 35 29](https://github.com/IPH-Technologies-Pvt-Ltd/Flatten-PDF-iOS/assets/124868129/bff841a4-2dbe-4ea4-a441-0279972574f0)
+
+![Simulator Screen Recording - iPhone 14 Pro Max - 2024-01-03 at 16 57 31](https://github.com/IPH-Technologies-Pvt-Ltd/Flatten-PDF-iOS/assets/124868129/9d8845ad-8a83-48eb-8f90-674c97634c54)
 
 
 
