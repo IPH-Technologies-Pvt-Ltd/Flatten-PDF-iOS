@@ -1,6 +1,5 @@
 
 # Flatten-PDF-iOS
-[![Swift](https://img.shields.io/badge/swift-%2320232a.svg?style=for-the-badge&logo=swift&logoColor=%23F05138)](https://swift.org/)
 
 Experience the seamless efficiency of our iOS Swift-developed PDF flattening tool, designed to effortlessly condense and simplify complex PDF documents, ensuring a streamlined and easily shareable digital experience.
 
@@ -42,7 +41,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) fil
 - [FontAwesomeSwift](https://github.com/thii/FontAwesome.swift) - Used for displaying social media icons.
 
 ## Video
-![Uploading Simulator Screen Recording - iPhone 14 Pro Max - 2024-01-03 at 11.35.29.gif…]()
+![Simulator Screen Recording - iPhone 14 Pro Max - 2024-01-03 at 11 35 29](https://github.com/IPH-Technologies-Pvt-Ltd/Flatten-PDF-iOS/assets/124868129/bff841a4-2dbe-4ea4-a441-0279972574f0)
 
 
 
