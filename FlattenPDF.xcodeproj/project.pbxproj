@@ -7,27 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04E456D12B346C8300A7489C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E456D02B346C8300A7489C /* AppDelegate.swift */; };
-		04E456D32B346C8300A7489C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E456D22B346C8300A7489C /* SceneDelegate.swift */; };
-		04E456D52B346C8300A7489C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E456D42B346C8300A7489C /* ViewController.swift */; };
-		04E456D82B346C8300A7489C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E456D62B346C8300A7489C /* Main.storyboard */; };
-		04E456DA2B346C8500A7489C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E456D92B346C8500A7489C /* Assets.xcassets */; };
-		04E456DD2B346C8500A7489C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E456DB2B346C8500A7489C /* LaunchScreen.storyboard */; };
+		047C89FE2B3EF16C005F0BC6 /* PDFModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C89FD2B3EF16C005F0BC6 /* PDFModel.swift */; };
+		B7A7749B2B3DF09D00B59B8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A7749A2B3DF09D00B59B8C /* AppDelegate.swift */; };
+		B7A7749D2B3DF09D00B59B8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A7749C2B3DF09D00B59B8C /* SceneDelegate.swift */; };
+		B7A7749F2B3DF09D00B59B8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A7749E2B3DF09D00B59B8C /* ViewController.swift */; };
+		B7A774A22B3DF09D00B59B8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7A774A02B3DF09D00B59B8C /* Main.storyboard */; };
+		B7A774A42B3DF09E00B59B8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7A774A32B3DF09E00B59B8C /* Assets.xcassets */; };
+		B7A774A72B3DF09E00B59B8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7A774A52B3DF09E00B59B8C /* LaunchScreen.storyboard */; };
+		B7A774AF2B3DF26800B59B8C /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A774AE2B3DF26800B59B8C /* MyCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		04E456CD2B346C8300A7489C /* FlattenPDF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlattenPDF.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		04E456D02B346C8300A7489C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		04E456D22B346C8300A7489C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		04E456D42B346C8300A7489C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		04E456D72B346C8300A7489C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		04E456D92B346C8500A7489C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		04E456DC2B346C8500A7489C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		04E456DE2B346C8500A7489C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		047C89FD2B3EF16C005F0BC6 /* PDFModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFModel.swift; sourceTree = "<group>"; };
+		B7A774972B3DF09D00B59B8C /* FlattenPDF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlattenPDF.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7A7749A2B3DF09D00B59B8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B7A7749C2B3DF09D00B59B8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B7A7749E2B3DF09D00B59B8C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B7A774A12B3DF09D00B59B8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B7A774A32B3DF09E00B59B8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B7A774A62B3DF09E00B59B8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B7A774A82B3DF09E00B59B8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7A774AE2B3DF26800B59B8C /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		04E456CA2B346C8300A7489C /* Frameworks */ = {
+		B7A774942B3DF09D00B59B8C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,32 +41,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04E456C42B346C8300A7489C = {
+		B7A7748E2B3DF09D00B59B8C = {
 			isa = PBXGroup;
 			children = (
-				04E456CF2B346C8300A7489C /* FlattenPDF */,
-				04E456CE2B346C8300A7489C /* Products */,
+				B7A774992B3DF09D00B59B8C /* FlattenPDF */,
+				B7A774982B3DF09D00B59B8C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		04E456CE2B346C8300A7489C /* Products */ = {
+		B7A774982B3DF09D00B59B8C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				04E456CD2B346C8300A7489C /* FlattenPDF.app */,
+				B7A774972B3DF09D00B59B8C /* FlattenPDF.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		04E456CF2B346C8300A7489C /* FlattenPDF */ = {
+		B7A774992B3DF09D00B59B8C /* FlattenPDF */ = {
 			isa = PBXGroup;
 			children = (
-				04E456D02B346C8300A7489C /* AppDelegate.swift */,
-				04E456D22B346C8300A7489C /* SceneDelegate.swift */,
-				04E456D42B346C8300A7489C /* ViewController.swift */,
-				04E456D62B346C8300A7489C /* Main.storyboard */,
-				04E456D92B346C8500A7489C /* Assets.xcassets */,
-				04E456DB2B346C8500A7489C /* LaunchScreen.storyboard */,
-				04E456DE2B346C8500A7489C /* Info.plist */,
+				B7A7749A2B3DF09D00B59B8C /* AppDelegate.swift */,
+				B7A7749C2B3DF09D00B59B8C /* SceneDelegate.swift */,
+				B7A7749E2B3DF09D00B59B8C /* ViewController.swift */,
+				B7A774A02B3DF09D00B59B8C /* Main.storyboard */,
+				B7A774A32B3DF09E00B59B8C /* Assets.xcassets */,
+				B7A774A52B3DF09E00B59B8C /* LaunchScreen.storyboard */,
+				B7A774A82B3DF09E00B59B8C /* Info.plist */,
+				B7A774AE2B3DF26800B59B8C /* MyCollectionViewCell.swift */,
+				047C89FD2B3EF16C005F0BC6 /* PDFModel.swift */,
 			);
 			path = FlattenPDF;
 			sourceTree = "<group>";
@@ -70,13 +76,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		04E456CC2B346C8300A7489C /* FlattenPDF */ = {
+		B7A774962B3DF09D00B59B8C /* FlattenPDF */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 04E456E12B346C8500A7489C /* Build configuration list for PBXNativeTarget "FlattenPDF" */;
+			buildConfigurationList = B7A774AB2B3DF09E00B59B8C /* Build configuration list for PBXNativeTarget "FlattenPDF" */;
 			buildPhases = (
-				04E456C92B346C8300A7489C /* Sources */,
-				04E456CA2B346C8300A7489C /* Frameworks */,
-				04E456CB2B346C8300A7489C /* Resources */,
+				B7A774932B3DF09D00B59B8C /* Sources */,
+				B7A774942B3DF09D00B59B8C /* Frameworks */,
+				B7A774952B3DF09D00B59B8C /* Resources */,
 			);
 			buildRules = (
 			);
@@ -84,25 +90,25 @@
 			);
 			name = FlattenPDF;
 			productName = FlattenPDF;
-			productReference = 04E456CD2B346C8300A7489C /* FlattenPDF.app */;
+			productReference = B7A774972B3DF09D00B59B8C /* FlattenPDF.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		04E456C52B346C8300A7489C /* Project object */ = {
+		B7A7748F2B3DF09D00B59B8C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					04E456CC2B346C8300A7489C = {
-						CreatedOnToolsVersion = 14.3.1;
+					B7A774962B3DF09D00B59B8C = {
+						CreatedOnToolsVersion = 15.0.1;
 					};
 				};
 			};
-			buildConfigurationList = 04E456C82B346C8300A7489C /* Build configuration list for PBXProject "FlattenPDF" */;
+			buildConfigurationList = B7A774922B3DF09D00B59B8C /* Build configuration list for PBXProject "FlattenPDF" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,55 +116,57 @@
 				en,
 				Base,
 			);
-			mainGroup = 04E456C42B346C8300A7489C;
-			productRefGroup = 04E456CE2B346C8300A7489C /* Products */;
+			mainGroup = B7A7748E2B3DF09D00B59B8C;
+			productRefGroup = B7A774982B3DF09D00B59B8C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				04E456CC2B346C8300A7489C /* FlattenPDF */,
+				B7A774962B3DF09D00B59B8C /* FlattenPDF */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		04E456CB2B346C8300A7489C /* Resources */ = {
+		B7A774952B3DF09D00B59B8C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04E456DD2B346C8500A7489C /* LaunchScreen.storyboard in Resources */,
-				04E456DA2B346C8500A7489C /* Assets.xcassets in Resources */,
-				04E456D82B346C8300A7489C /* Main.storyboard in Resources */,
+				B7A774A72B3DF09E00B59B8C /* LaunchScreen.storyboard in Resources */,
+				B7A774A42B3DF09E00B59B8C /* Assets.xcassets in Resources */,
+				B7A774A22B3DF09D00B59B8C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		04E456C92B346C8300A7489C /* Sources */ = {
+		B7A774932B3DF09D00B59B8C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04E456D52B346C8300A7489C /* ViewController.swift in Sources */,
-				04E456D12B346C8300A7489C /* AppDelegate.swift in Sources */,
-				04E456D32B346C8300A7489C /* SceneDelegate.swift in Sources */,
+				B7A7749F2B3DF09D00B59B8C /* ViewController.swift in Sources */,
+				B7A7749B2B3DF09D00B59B8C /* AppDelegate.swift in Sources */,
+				B7A774AF2B3DF26800B59B8C /* MyCollectionViewCell.swift in Sources */,
+				B7A7749D2B3DF09D00B59B8C /* SceneDelegate.swift in Sources */,
+				047C89FE2B3EF16C005F0BC6 /* PDFModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		04E456D62B346C8300A7489C /* Main.storyboard */ = {
+		B7A774A02B3DF09D00B59B8C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				04E456D72B346C8300A7489C /* Base */,
+				B7A774A12B3DF09D00B59B8C /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		04E456DB2B346C8500A7489C /* LaunchScreen.storyboard */ = {
+		B7A774A52B3DF09E00B59B8C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				04E456DC2B346C8500A7489C /* Base */,
+				B7A774A62B3DF09E00B59B8C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -166,10 +174,11 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		04E456DF2B346C8500A7489C /* Debug */ = {
+		B7A774A92B3DF09E00B59B8C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -202,7 +211,8 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -217,19 +227,21 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		04E456E02B346C8500A7489C /* Release */ = {
+		B7A774AA2B3DF09E00B59B8C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -262,7 +274,8 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -271,36 +284,37 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		04E456E22B346C8500A7489C /* Debug */ = {
+		B7A774AC2B3DF09E00B59B8C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3EGXVN72T4;
+				DEVELOPMENT_TEAM = F52QC5TRHY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlattenPDF/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.3D-Animation.FlattenPDF";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ajay.FlattenPDF;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -308,27 +322,28 @@
 			};
 			name = Debug;
 		};
-		04E456E32B346C8500A7489C /* Release */ = {
+		B7A774AD2B3DF09E00B59B8C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3EGXVN72T4;
+				DEVELOPMENT_TEAM = F52QC5TRHY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlattenPDF/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.3D-Animation.FlattenPDF";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ajay.FlattenPDF;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -339,25 +354,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		04E456C82B346C8300A7489C /* Build configuration list for PBXProject "FlattenPDF" */ = {
+		B7A774922B3DF09D00B59B8C /* Build configuration list for PBXProject "FlattenPDF" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				04E456DF2B346C8500A7489C /* Debug */,
-				04E456E02B346C8500A7489C /* Release */,
+				B7A774A92B3DF09E00B59B8C /* Debug */,
+				B7A774AA2B3DF09E00B59B8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		04E456E12B346C8500A7489C /* Build configuration list for PBXNativeTarget "FlattenPDF" */ = {
+		B7A774AB2B3DF09E00B59B8C /* Build configuration list for PBXNativeTarget "FlattenPDF" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				04E456E22B346C8500A7489C /* Debug */,
-				04E456E32B346C8500A7489C /* Release */,
+				B7A774AC2B3DF09E00B59B8C /* Debug */,
+				B7A774AD2B3DF09E00B59B8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 04E456C52B346C8300A7489C /* Project object */;
+	rootObject = B7A7748F2B3DF09D00B59B8C /* Project object */;
 }

@@ -1,9 +1,7 @@
 //
 //  SceneDelegate.swift
 //  FlattenPDF
-//
-//  Created by iPHTech 28 on 21/12/23.
-//
+
 
 import UIKit
 

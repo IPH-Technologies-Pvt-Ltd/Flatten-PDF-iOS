@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -14,154 +14,169 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FlattenPDF" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make your editor PDFs read-only" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9q-vZ-nIs">
-                                <rect key="frame" x="8" y="119" width="398" height="23"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2Za-dW-ECL">
+                                <rect key="frame" x="0.0" y="273" width="393" height="300"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="YWb-Uc-9SV"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tJv-Vk-OLX">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="k7y-Pf-gzp" customClass="MyCollectionViewCell" customModule="FlattenPDF" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-7" width="380" height="314"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="380" height="314"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EVR-h3-Oqi" customClass="PDFView">
+                                                    <rect key="frame" x="20" y="44" width="200" height="226"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vL-cq-wKL">
+                                                            <rect key="frame" x="21" y="159" width="132" height="20"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="200" id="tZ6-MG-10W"/>
+                                                        <constraint firstAttribute="width" constant="200" id="tgI-xS-vKH"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="EVR-h3-Oqi" firstAttribute="leading" secondItem="k7y-Pf-gzp" secondAttribute="leading" constant="20" id="0Vf-6g-KRp"/>
+                                            <constraint firstItem="EVR-h3-Oqi" firstAttribute="centerY" secondItem="k7y-Pf-gzp" secondAttribute="centerY" id="A31-L2-lps"/>
+                                            <constraint firstItem="EVR-h3-Oqi" firstAttribute="top" secondItem="k7y-Pf-gzp" secondAttribute="top" constant="44" id="tDc-CS-VT9"/>
+                                        </constraints>
+                                        <size key="customSize" width="380" height="314"/>
+                                        <connections>
+                                            <outlet property="leadingConstraint" destination="0Vf-6g-KRp" id="L5X-Uw-zYK"/>
+                                            <outlet property="myLabel" destination="5vL-cq-wKL" id="NYt-eo-4bJ"/>
+                                            <outlet property="pdfView" destination="EVR-h3-Oqi" id="Yym-uf-7GD"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make your editor PDFs read-only" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFI-d5-iuz">
+                                <rect key="frame" x="6" y="120" width="381" height="23"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
                                 <color key="textColor" red="0.1019607843" green="0.32549019610000002" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(No size limit)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIG-ci-WWK">
-                                <rect key="frame" x="8" y="152" width="398" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(No size limit)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0f9-Xj-JrG">
+                                <rect key="frame" x="6" y="151" width="381" height="20.666666666666657"/>
                                 <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="18"/>
                                 <color key="textColor" red="0.1019607843" green="0.32549019610000002" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJ2-mq-0d6">
-                                <rect key="frame" x="120" y="228.5" width="174" height="36.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Flatten PDF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ump-hO-8ST">
+                                <rect key="frame" x="6" y="81" width="381" height="31"/>
+                                <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="28"/>
+                                <color key="textColor" red="0.1019607843" green="0.32549019610000002" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rzd-IW-zcd">
+                                <rect key="frame" x="110" y="193" width="173" height="33.333333333333343"/>
                                 <color key="backgroundColor" red="0.1019607843" green="0.32549019610000002" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36.5" id="DU3-ei-MN8"/>
-                                </constraints>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Upload PDF">
                                     <fontDescription key="titleFontDescription" name="Georgia" family="Georgia" pointSize="17"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="uploadPDFButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pcO-6y-Oa9"/>
+                                    <action selector="uploadButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m5i-to-IHy"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kzF-rB-3vw" customClass="PDFView">
-                                <rect key="frame" x="0.0" y="321" width="414" height="271"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No file selected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="em9-FE-4xo">
-                                        <rect key="frame" x="8" y="118" width="398" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="271" id="AoN-jk-5Mt"/>
-                                    <constraint firstAttribute="bottom" secondItem="em9-FE-4xo" secondAttribute="bottom" constant="117" id="OZh-rn-Tcc"/>
-                                    <constraint firstItem="em9-FE-4xo" firstAttribute="leading" secondItem="kzF-rB-3vw" secondAttribute="leading" constant="8" id="SHx-0z-4pR"/>
-                                    <constraint firstItem="em9-FE-4xo" firstAttribute="top" secondItem="kzF-rB-3vw" secondAttribute="top" constant="118" id="dFi-Gm-6aY"/>
-                                    <constraint firstAttribute="width" constant="414" id="vdn-fq-8oG"/>
-                                    <constraint firstAttribute="trailing" secondItem="em9-FE-4xo" secondAttribute="trailing" constant="8" id="yM4-Qq-F8H"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IdN-h7-Hr3">
-                                <rect key="frame" x="117" y="628" width="180" height="37"/>
-                                <color key="tintColor" red="0.098039215690000001" green="0.56078431370000004" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Flatten">
-                                    <fontDescription key="titleFontDescription" name="Georgia" family="Georgia" pointSize="20"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="flattenBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8v7-7s-lhh"/>
-                                </connections>
-                            </button>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PgR-rd-IMZ">
-                                <rect key="frame" x="146" y="609" width="122" height="4"/>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="flP-ja-1ny">
+                                <rect key="frame" x="133" y="593" width="150" height="4"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.1019607843" green="0.32549019610000002" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </progressView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fs-2S-Qgc">
-                                <rect key="frame" x="117" y="670" width="180" height="34.5"/>
-                                <color key="backgroundColor" red="0.06585701365286363" green="0.38446969696969702" blue="0.24662314480255768" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="180" id="Oaq-bf-O2h"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKs-ir-LYk">
+                                <rect key="frame" x="140" y="624" width="113" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.098039215690000001" green="0.56078431370000004" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Download">
-                                    <fontDescription key="titleFontDescription" name="Georgia" family="Georgia" pointSize="18"/>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="gray" title="Flatten PDF"/>
                                 <connections>
-                                    <action selector="downloadButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e3S-5L-nt6"/>
+                                    <action selector="flattenButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OXa-cz-K7q"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Flatten PDF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ced-gT-D2V">
-                                <rect key="frame" x="8" y="68" width="398" height="31"/>
-                                <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="28"/>
-                                <color key="textColor" red="0.1019607843" green="0.32549019610000002" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbz-zY-S11">
-                                <rect key="frame" x="356.5" y="597" width="37.5" height="18"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EML-Pl-JWJ">
+                                <rect key="frame" x="140" y="667" width="113" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.098039215690000001" green="0.56078431370000004" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Download"/>
+                                <connections>
+                                    <action selector="downloadButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fAz-Gb-lpu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.95294117649999999" green="0.97254901959999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" red="0.10980392160000001" green="0.34509803919999998" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ced-gT-D2V" secondAttribute="trailing" constant="8" id="35q-Tw-CEW"/>
-                            <constraint firstItem="1fs-2S-Qgc" firstAttribute="top" secondItem="IdN-h7-Hr3" secondAttribute="bottom" constant="5" id="36q-W3-626"/>
-                            <constraint firstItem="Ced-gT-D2V" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="3s2-hX-8ir"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dbz-zY-S11" secondAttribute="trailing" constant="20" id="4Ai-fh-Dis"/>
-                            <constraint firstItem="jJ2-mq-0d6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="61t-pb-PR7"/>
-                            <constraint firstItem="IdN-h7-Hr3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6Q2-72-f3Q"/>
-                            <constraint firstItem="Ced-gT-D2V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="AsP-cU-NrY"/>
-                            <constraint firstItem="C9q-vZ-nIs" firstAttribute="top" secondItem="Ced-gT-D2V" secondAttribute="bottom" constant="20" id="BHf-Kc-IBd"/>
-                            <constraint firstItem="PgR-rd-IMZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BlU-0w-cKo"/>
-                            <constraint firstItem="IdN-h7-Hr3" firstAttribute="width" secondItem="1fs-2S-Qgc" secondAttribute="width" multiplier="1:1" id="Bwv-5O-SK9"/>
-                            <constraint firstItem="kzF-rB-3vw" firstAttribute="top" secondItem="jJ2-mq-0d6" secondAttribute="bottom" constant="56" id="DqG-Yq-eaf"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C9q-vZ-nIs" secondAttribute="trailing" constant="8" id="FmS-Uj-G3I"/>
-                            <constraint firstItem="PgR-rd-IMZ" firstAttribute="top" secondItem="kzF-rB-3vw" secondAttribute="bottom" constant="17" id="NKb-8p-5co"/>
-                            <constraint firstItem="wIG-ci-WWK" firstAttribute="top" secondItem="C9q-vZ-nIs" secondAttribute="bottom" constant="10" id="Qwb-nK-cDw"/>
-                            <constraint firstItem="PgR-rd-IMZ" firstAttribute="width" secondItem="1fs-2S-Qgc" secondAttribute="width" multiplier="0.677778" id="RI5-xs-sNQ"/>
-                            <constraint firstItem="kzF-rB-3vw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Vkl-eA-sXT"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wIG-ci-WWK" secondAttribute="trailing" constant="8" id="dfu-Mq-gmr"/>
-                            <constraint firstItem="IdN-h7-Hr3" firstAttribute="top" secondItem="PgR-rd-IMZ" secondAttribute="bottom" constant="15" id="fC5-Kz-AQZ"/>
-                            <constraint firstItem="1fs-2S-Qgc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k3N-ww-q2d"/>
-                            <constraint firstItem="kzF-rB-3vw" firstAttribute="top" secondItem="jJ2-mq-0d6" secondAttribute="bottom" constant="56" id="kJ1-cO-hZ4"/>
-                            <constraint firstItem="C9q-vZ-nIs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="l0c-XA-bST"/>
-                            <constraint firstItem="jJ2-mq-0d6" firstAttribute="top" secondItem="wIG-ci-WWK" secondAttribute="bottom" constant="56" id="pBq-GK-C4Q"/>
-                            <constraint firstItem="wIG-ci-WWK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="qUx-vQ-A3G"/>
-                            <constraint firstItem="jJ2-mq-0d6" firstAttribute="top" secondItem="wIG-ci-WWK" secondAttribute="bottom" constant="56" id="v3O-vA-9rs"/>
-                            <constraint firstItem="kzF-rB-3vw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xGM-eZ-b2C"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jJ2-mq-0d6" secondAttribute="trailing" constant="120" id="y2k-hT-32K"/>
-                            <constraint firstItem="dbz-zY-S11" firstAttribute="top" secondItem="kzF-rB-3vw" secondAttribute="bottom" constant="5" id="yCe-p2-Evt"/>
+                            <constraint firstItem="dFI-d5-iuz" firstAttribute="top" secondItem="ump-hO-8ST" secondAttribute="bottom" constant="8" symbolic="YES" id="1ls-NZ-wp4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="flP-ja-1ny" secondAttribute="trailing" constant="110" id="3X1-rL-OeN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ump-hO-8ST" secondAttribute="trailing" constant="6" id="4Yq-fw-CcA"/>
+                            <constraint firstItem="ump-hO-8ST" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="6Va-3W-qnj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dFI-d5-iuz" secondAttribute="trailing" constant="6" id="9km-C3-0N2"/>
+                            <constraint firstItem="2Za-dW-ECL" firstAttribute="top" secondItem="Rzd-IW-zcd" secondAttribute="bottom" constant="46.670000000000002" id="AZa-cp-KEY"/>
+                            <constraint firstItem="2Za-dW-ECL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="EhW-0L-ryI"/>
+                            <constraint firstItem="Rzd-IW-zcd" firstAttribute="top" secondItem="0f9-Xj-JrG" secondAttribute="bottom" constant="21.329999999999998" id="FPZ-Nc-0iN"/>
+                            <constraint firstItem="Rzd-IW-zcd" firstAttribute="top" secondItem="0f9-Xj-JrG" secondAttribute="bottom" constant="21.329999999999998" id="IaT-T4-GcH"/>
+                            <constraint firstItem="flP-ja-1ny" firstAttribute="top" secondItem="2Za-dW-ECL" secondAttribute="bottom" constant="20" id="PnF-7R-RWb"/>
+                            <constraint firstItem="ump-hO-8ST" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="6" id="QBN-2I-kQO"/>
+                            <constraint firstItem="flP-ja-1ny" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="133" id="TaA-71-FQr"/>
+                            <constraint firstItem="dFI-d5-iuz" firstAttribute="top" secondItem="ump-hO-8ST" secondAttribute="bottom" constant="8" symbolic="YES" id="U0D-Nh-dOd"/>
+                            <constraint firstItem="0f9-Xj-JrG" firstAttribute="top" secondItem="dFI-d5-iuz" secondAttribute="bottom" constant="8" symbolic="YES" id="VbU-II-HUq"/>
+                            <constraint firstItem="2Za-dW-ECL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Y06-6q-LBt"/>
+                            <constraint firstItem="Rzd-IW-zcd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="110" id="gbK-k3-ffv"/>
+                            <constraint firstItem="dFI-d5-iuz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="6" id="hBH-vT-ohH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rzd-IW-zcd" secondAttribute="trailing" constant="110" id="mzW-EF-WAZ"/>
+                            <constraint firstItem="0f9-Xj-JrG" firstAttribute="top" secondItem="dFI-d5-iuz" secondAttribute="bottom" constant="8" symbolic="YES" id="nt3-qo-vhd"/>
+                            <constraint firstItem="0f9-Xj-JrG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="6" id="wJ4-Wy-PMW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0f9-Xj-JrG" secondAttribute="trailing" constant="6" id="yrq-c2-02f"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="downloadButton" destination="1fs-2S-Qgc" id="Unl-6c-qix"/>
-                        <outlet property="flattenButton" destination="IdN-h7-Hr3" id="G8i-ZI-6vl"/>
-                        <outlet property="flattenPDFLbl" destination="Ced-gT-D2V" id="FAZ-fO-6yv"/>
-                        <outlet property="makeYourEditorLbl" destination="C9q-vZ-nIs" id="Hsz-Q5-xBv"/>
-                        <outlet property="noSelectLbl" destination="em9-FE-4xo" id="fFD-zA-W66"/>
-                        <outlet property="pdfSizeLbl" destination="dbz-zY-S11" id="c5p-uu-qqE"/>
-                        <outlet property="pdfView" destination="kzF-rB-3vw" id="kz6-60-Sz3"/>
-                        <outlet property="progressView" destination="PgR-rd-IMZ" id="xaU-Za-UsZ"/>
-                        <outlet property="sizeLimitLbl" destination="wIG-ci-WWK" id="9Gm-he-LUN"/>
-                        <outlet property="uploadButton" destination="jJ2-mq-0d6" id="agf-KE-7Ly"/>
+                        <outlet property="downloadBtn" destination="EML-Pl-JWJ" id="G1O-bN-SDO"/>
+                        <outlet property="editorLbl" destination="dFI-d5-iuz" id="9AH-5M-2EZ"/>
+                        <outlet property="flattenPdfButton" destination="fKs-ir-LYk" id="VoT-4g-XgP"/>
+                        <outlet property="flattenPdfLbl" destination="ump-hO-8ST" id="6SN-C0-Fcf"/>
+                        <outlet property="myCollectionView" destination="2Za-dW-ECL" id="Sry-SG-hiE"/>
+                        <outlet property="progressView" destination="flP-ja-1ny" id="s2b-ew-3Qz"/>
+                        <outlet property="uploadButton" destination="Rzd-IW-zcd" id="Wp4-L6-aKE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="286.95652173913044" y="31.473214285714285"/>
+            <point key="canvasLocation" x="43.511450381679388" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
