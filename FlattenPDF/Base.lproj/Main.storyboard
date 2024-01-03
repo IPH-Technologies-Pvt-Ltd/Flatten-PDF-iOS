@@ -107,10 +107,13 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.1019607843" green="0.32549019610000002" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </progressView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKs-ir-LYk">
-                                <rect key="frame" x="140" y="624" width="113" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKs-ir-LYk">
+                                <rect key="frame" x="136.66666666666666" y="624" width="119.99999999999997" height="35"/>
                                 <color key="backgroundColor" red="0.098039215690000001" green="0.56078431370000004" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="5Zh-a4-tlE"/>
+                                    <constraint firstAttribute="width" constant="120" id="SEP-or-E80"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Flatten PDF"/>
@@ -118,10 +121,13 @@
                                     <action selector="flattenButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OXa-cz-K7q"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EML-Pl-JWJ">
-                                <rect key="frame" x="140" y="667" width="113" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EML-Pl-JWJ">
+                                <rect key="frame" x="136.66666666666666" y="667" width="119.99999999999997" height="35"/>
                                 <color key="backgroundColor" red="0.098039215690000001" green="0.56078431370000004" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="BWt-uf-o3w"/>
+                                    <constraint firstAttribute="height" constant="35" id="kVx-gz-vQR"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Download"/>
@@ -142,8 +148,12 @@
                             <constraint firstItem="2Za-dW-ECL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="EhW-0L-ryI"/>
                             <constraint firstItem="Rzd-IW-zcd" firstAttribute="top" secondItem="0f9-Xj-JrG" secondAttribute="bottom" constant="21.329999999999998" id="FPZ-Nc-0iN"/>
                             <constraint firstItem="Rzd-IW-zcd" firstAttribute="top" secondItem="0f9-Xj-JrG" secondAttribute="bottom" constant="21.329999999999998" id="IaT-T4-GcH"/>
+                            <constraint firstItem="fKs-ir-LYk" firstAttribute="top" secondItem="flP-ja-1ny" secondAttribute="bottom" constant="27" id="M7e-L0-Ou1"/>
+                            <constraint firstItem="EML-Pl-JWJ" firstAttribute="top" secondItem="fKs-ir-LYk" secondAttribute="bottom" constant="8" symbolic="YES" id="MUf-nK-dgq"/>
+                            <constraint firstItem="EML-Pl-JWJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pkd-Cf-3jC"/>
                             <constraint firstItem="flP-ja-1ny" firstAttribute="top" secondItem="2Za-dW-ECL" secondAttribute="bottom" constant="20" id="PnF-7R-RWb"/>
                             <constraint firstItem="ump-hO-8ST" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="6" id="QBN-2I-kQO"/>
+                            <constraint firstItem="fKs-ir-LYk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SMh-Rb-Dio"/>
                             <constraint firstItem="flP-ja-1ny" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="133" id="TaA-71-FQr"/>
                             <constraint firstItem="dFI-d5-iuz" firstAttribute="top" secondItem="ump-hO-8ST" secondAttribute="bottom" constant="8" symbolic="YES" id="U0D-Nh-dOd"/>
                             <constraint firstItem="0f9-Xj-JrG" firstAttribute="top" secondItem="dFI-d5-iuz" secondAttribute="bottom" constant="8" symbolic="YES" id="VbU-II-HUq"/>

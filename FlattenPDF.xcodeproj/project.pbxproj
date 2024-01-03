@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		047C89FE2B3EF16C005F0BC6 /* PDFModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C89FD2B3EF16C005F0BC6 /* PDFModel.swift */; };
+		04B5AD1A2B4547B800799596 /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 04B5AD192B4547B800799596 /* ZIPFoundation */; };
 		B7A7749B2B3DF09D00B59B8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A7749A2B3DF09D00B59B8C /* AppDelegate.swift */; };
 		B7A7749D2B3DF09D00B59B8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A7749C2B3DF09D00B59B8C /* SceneDelegate.swift */; };
 		B7A7749F2B3DF09D00B59B8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A7749E2B3DF09D00B59B8C /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04B5AD1A2B4547B800799596 /* ZIPFoundation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +91,9 @@
 			dependencies = (
 			);
 			name = FlattenPDF;
+			packageProductDependencies = (
+				04B5AD192B4547B800799596 /* ZIPFoundation */,
+			);
 			productName = FlattenPDF;
 			productReference = B7A774972B3DF09D00B59B8C /* FlattenPDF.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +122,9 @@
 				Base,
 			);
 			mainGroup = B7A7748E2B3DF09D00B59B8C;
+			packageReferences = (
+				04B5AD182B4547B800799596 /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
+			);
 			productRefGroup = B7A774982B3DF09D00B59B8C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -373,6 +381,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		04B5AD182B4547B800799596 /* XCRemoteSwiftPackageReference "ZIPFoundation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/weichsel/ZIPFoundation.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.17;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		04B5AD192B4547B800799596 /* ZIPFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04B5AD182B4547B800799596 /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
+			productName = ZIPFoundation;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B7A7748F2B3DF09D00B59B8C /* Project object */;
 }

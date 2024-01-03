@@ -5,6 +5,8 @@
 
 import UIKit
 import PDFKit
+import ZIPFoundation
+
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIDocumentPickerDelegate,UICollectionViewDelegateFlowLayout{
     
@@ -52,8 +54,37 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             showAlert(message: "Please select a PDF first.")
             return
         }
-        for index in pdfs.indices {
-            self.savePDF(pdfDocument: pdfs[index].pdfDoc)
+    
+        let tempDirectory = FileManager.default.temporaryDirectory
+        let zipFileName = "pdfs.zip"
+        let zipFilePath = tempDirectory.appendingPathComponent(zipFileName)
+        let fileManager = FileManager.default
+                
+        do {
+        
+            if fileManager.fileExists(atPath: zipFilePath.path) {
+                try fileManager.removeItem(atPath: zipFilePath.path)
+            }
+            
+            let zipArchive = try Archive(url: zipFilePath, accessMode: .create)
+            
+            for (index, pdf) in pdfs.enumerated() {
+                let pdfData = pdf.pdfDoc.dataRepresentation()
+                try zipArchive.addEntry(with: "pdf\(index + 1).pdf", type: .file, uncompressedSize: UInt32(pdfData!.count), provider: { position, size -> Data in
+                    let range = Range(uncheckedBounds: (position, position + size))
+                    return pdfData!.subdata(in: range)
+                })
+            }
+    
+            let activityViewController = UIActivityViewController(activityItems: [zipFilePath], applicationActivities: nil)
+            
+            if let popoverController = activityViewController.popoverPresentationController {
+                popoverController.sourceView = sender
+                popoverController.sourceRect = sender.bounds
+            }
+            present(activityViewController, animated: true, completion: nil)
+        } catch {
+            showAlert(message: "Error creating zip file: \(error.localizedDescription)")
         }
     }
     
@@ -151,21 +182,38 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = myCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MyCollectionViewCell
-      
+        
         cell.loadPDFDocument(pdfs[indexPath.item])
- 
-        DispatchQueue.main.async {
-            self.myCollectionView.reloadData()
+        
+        
+        if pdfs.count == 1 {
+            cell.leadingConstraint.constant = 115
+        } else {
+            cell.leadingConstraint.constant = 10
         }
+        
+       
+        cell.layoutIfNeeded()
+        myCollectionView.reloadData()
         return cell
         
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let cellWidth = myCollectionView.frame.width - 230
-        let cellHeight: CGFloat = 230
-        return CGSize(width: cellWidth, height: cellHeight)
+        if pdfs.count == 1 {
+          
+            let cellWidth = collectionView.frame.width - 10
+            let cellHeight: CGFloat = 230
+            let xOffset = (myCollectionView.frame.width - cellWidth) / 2.0
+            return CGSize(width: cellWidth, height: cellHeight)
+        } else {
+            
+            let cellWidth = collectionView.frame.width - 220
+            let cellHeight: CGFloat = 230
+           
+            return CGSize(width: cellWidth, height: cellHeight)
+        }
         
     }
     
@@ -174,7 +222,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
       
         pdfs = []
-        for (index, selectedFileURL) in urls.enumerated(){
+        for selectedFileURL in urls{
             do {
                 let pdfDocument = try PDFDocument(url: selectedFileURL)
                 if let pdfData = pdfDocument?.dataRepresentation() {
@@ -188,9 +236,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 showAlert(message: "Error loading PDF: \(error.localizedDescription)")
             }
         }
-        DispatchQueue.main.async {
-            self.myCollectionView.reloadData()
-        }
+        
+        myCollectionView.reloadData()
+        
         
     }
     
