@@ -108,11 +108,11 @@
                                 <color key="tintColor" red="0.1019607843" green="0.32549019610000002" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </progressView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKs-ir-LYk">
-                                <rect key="frame" x="136.66666666666666" y="624" width="119.99999999999997" height="35"/>
+                                <rect key="frame" x="126.66666666666669" y="624" width="140" height="35"/>
                                 <color key="backgroundColor" red="0.098039215690000001" green="0.56078431370000004" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="5Zh-a4-tlE"/>
-                                    <constraint firstAttribute="width" constant="120" id="SEP-or-E80"/>
+                                    <constraint firstAttribute="width" constant="140" id="SEP-or-E80"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -122,10 +122,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EML-Pl-JWJ">
-                                <rect key="frame" x="136.66666666666666" y="667" width="119.99999999999997" height="35"/>
+                                <rect key="frame" x="126.66666666666669" y="667" width="140" height="35"/>
                                 <color key="backgroundColor" red="0.098039215690000001" green="0.56078431370000004" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="BWt-uf-o3w"/>
+                                    <constraint firstAttribute="width" constant="140" id="BWt-uf-o3w"/>
                                     <constraint firstAttribute="height" constant="35" id="kVx-gz-vQR"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -51,41 +51,33 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @IBAction func downloadButtonAction(_ sender: UIButton) {
         
         if pdfs.isEmpty {
-            showAlert(message: "Please select a PDF first.")
-            return
-        }
-    
-        let tempDirectory = FileManager.default.temporaryDirectory
-        let zipFileName = "pdfs.zip"
-        let zipFilePath = tempDirectory.appendingPathComponent(zipFileName)
-        let fileManager = FileManager.default
-                
-        do {
-        
-            if fileManager.fileExists(atPath: zipFilePath.path) {
-                try fileManager.removeItem(atPath: zipFilePath.path)
+                showAlert(message: "Please select a PDF first.")
+                return
             }
-            
-            let zipArchive = try Archive(url: zipFilePath, accessMode: .create)
-            
+
+            var itemsToShare: [Any] = []
+
             for (index, pdf) in pdfs.enumerated() {
                 let pdfData = pdf.pdfDoc.dataRepresentation()
-                try zipArchive.addEntry(with: "pdf\(index + 1).pdf", type: .file, uncompressedSize: UInt32(pdfData!.count), provider: { position, size -> Data in
-                    let range = Range(uncheckedBounds: (position, position + size))
-                    return pdfData!.subdata(in: range)
-                })
+                let pdfFileName = "pdf\(index + 1).pdf"
+                let pdfFilePath = FileManager.default.temporaryDirectory.appendingPathComponent(pdfFileName)
+                
+                do {
+                    try pdfData?.write(to: pdfFilePath)
+                    itemsToShare.append(pdfFilePath)
+                } catch {
+                    showAlert(message: "Error saving PDF \(pdfFileName): \(error.localizedDescription)")
+                }
             }
-    
-            let activityViewController = UIActivityViewController(activityItems: [zipFilePath], applicationActivities: nil)
+
+            let activityViewController = UIActivityViewController(activityItems: itemsToShare, applicationActivities: nil)
             
             if let popoverController = activityViewController.popoverPresentationController {
                 popoverController.sourceView = sender
                 popoverController.sourceRect = sender.bounds
             }
+
             present(activityViewController, animated: true, completion: nil)
-        } catch {
-            showAlert(message: "Error creating zip file: \(error.localizedDescription)")
-        }
     }
     
     @IBAction func flattenButtonAction(_ sender: UIButton) {
@@ -231,6 +223,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                     pdfs.append(PDFModel(pdfDoc: pdfDocument!, pdfSize: fileSizeString))
                     flattenPdfButton.isHidden = false
                     downloadBtn.isHidden = true
+                   
                 }
             } catch {
                 showAlert(message: "Error loading PDF: \(error.localizedDescription)")
@@ -238,7 +231,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
         
         myCollectionView.reloadData()
-        
         
     }
     
