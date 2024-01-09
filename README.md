@@ -38,12 +38,11 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) fil
 ## Acknowledgements
 
 
-- [FontAwesomeSwift](https://github.com/thii/FontAwesome.swift) - Used for displaying social media icons.
+- [FontAwesomeSwift](https://github.com/thii/FontAwesome.swift) - Used for flatten pdfs.
 
 ## Video
 
-![Simulator Screen Recording - iPhone 14 Pro Max - 2024-01-03 at 16 57 31](https://github.com/IPH-Technologies-Pvt-Ltd/Flatten-PDF-iOS/assets/124868129/9d8845ad-8a83-48eb-8f90-674c97634c54)
-
+![Simulator Screen Recording - iPhone 14 Pro Max - 2024-01-09 at 12 36 40](https://github.com/IPH-Technologies-Pvt-Ltd/Flatten-PDF-iOS/assets/124868129/d4033f44-8238-4236-955f-cb0cb5ced8f1)
 
 
 
